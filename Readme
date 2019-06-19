@@ -1,0 +1,13 @@
+Compilar módulo myMPU9250.c:
+export ARCH=arm
+export CROSS_COMPILE=arm-linux-gnueabi-
+make
+
+Compilar userCode.c:
+arm-linux-gnueabi-gcc userCode.c -o userCode
+
+Intalar módulo(desde BBB):
+insmod myMPU9250.ko
+
+Ejecutar la interfaz de usuario (desde BBB):
+./userCode
